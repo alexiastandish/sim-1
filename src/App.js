@@ -1,21 +1,43 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
+import Dashboard from './components/Dashboard/Dashboard'
+// import Header from './components/Header/Header'
+import Form from './components/Form/Form'
+import axios from 'axios'
+import './App.css'
 
 class App extends Component {
+  constructor() {
+    super()
+
+    this.state = {
+      inventory: [],
+    }
+    this.getInventory = this.getInventory.bind(this)
+  }
+
+  componentDidMount() {
+    this.getItem
+  }
+  getInventory() {
+    axios.get('/api/inventory').then(this.updateItemsState)
+  }
+  updateItemsState(response) {
+    this.setState({ items: response.data })
+  }
+
   render() {
+    console.log('this.state.inventory', this.state.inventory)
+    console.log('this.state.inventory', this.state.inventory)
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <div className="content-body">
+          {/* <Header /> */}
+          <Dashboard inventory={this.state.inventory} />
+          <Form newProduct={this.addToList} />
+        </div>
       </div>
-    );
+    )
   }
 }
 
-export default App;
+export default App

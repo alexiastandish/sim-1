@@ -1,0 +1,43 @@
+.form-wrapper {
+  width: 300px;
+  background: #3ad886;
+  height: 400px;
+  margin: 30px;
+  padding: 10px;
+}
+
+.inputs {
+  flex-direction: column;
+  display: flex;
+  width: 250px;
+  padding: 10px;
+}
+.image {
+  width: 250px;
+  height: 150px;
+  background: white;
+  margin: 10px auto;
+}
+
+input {
+  margin: 10px;
+}
+
+.form-button {
+  margin: 10px;
+  width: 100px;
+  height: 50px;
+}
+
+.button-section {
+  width: 250px;
+  padding: 10px;
+}
+
+.cancel {
+  float: left;
+}
+
+.add {
+  float: right;
+}
