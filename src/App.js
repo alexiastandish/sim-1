@@ -16,13 +16,10 @@ class App extends Component {
   }
 
   componentDidMount() {
-    this.getItem
+    this.getInventory()
   }
   getInventory() {
     axios.get('/api/inventory').then(this.updateItemsState)
-  }
-  updateItemsState(response) {
-    this.setState({ items: response.data })
   }
 
   render() {

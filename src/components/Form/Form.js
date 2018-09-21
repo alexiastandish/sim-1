@@ -35,6 +35,14 @@ class Form extends Component {
       .then(this.clearInput)
   }
 
+  updateItemsState(response) {
+    this.setState({
+      img: response.target.value,
+      name: response.target.value,
+      price: response.target.value,
+    })
+  }
+
   render() {
     return (
       <div className="form-parent">

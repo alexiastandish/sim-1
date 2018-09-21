@@ -28,4 +28,8 @@ module.exports = {
       return res.status(200).json(inventory)
     })
   },
+
+  update: (req, res) => {
+    const { img, product_name, product_price } = req.body
+  },
 }

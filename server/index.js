@@ -12,7 +12,7 @@ const port = process.env.PORT || 3004
 
 app.get('/api/inventory', controller.getAll)
 app.post('/api/inventory', controller.create)
-app.put('/api/product/:id', controller.update)
+app.put('/api/inventory/:id', controller.update)
 app.delete('/api/inventory/:id', controller.removeProduct)
 
 massive(process.env.CONNECTION_STRING).then(db => {
